@@ -28,6 +28,8 @@ header {
   font-size: 28px;
   font-weight: bold;
   color: #fefefe;
+  letter-spacing: -3px;
+  border-bottom: 1px solid white;
 }
 
 /* hamburger menu */
@@ -42,7 +44,7 @@ header {
 .nav-bar ul li a {
   display: block;
   color: #fefefe;
-  font-size: 16px;
+  font-size: 18px;
   padding: 5px 15px;
   border-radius: 50px;
   transition: 0.2ms;
@@ -51,11 +53,12 @@ header {
 
 .nav-bar ul li a:hover {
   background: #fefefe;
-  color: #102121;
+  font-weight: 500;
+  color: #313131;
 }
 
 .nav-bar ul li a.active {
-  color: #102121;
+  color: #313131;
   background: #fefefe;
 }
 
@@ -82,14 +85,18 @@ header {
     margin: 6px 0;
   }
   .nav-bar {
-    height: 450px;
+    height: 0;
     position: absolute;
     top: 80px;
     left: 0;
     right: 0;
     width: 100vw;
-    background: #102121;
+    background: #313131;
     transition: 0.2s;
+    overflow: hidden;
+  }
+  .nav-bar.active {
+    height: 450px;
   }
   .nav-bar ul {
     display: block;
@@ -97,9 +104,12 @@ header {
     margin: 80px auto 0 auto;
     text-align: center;
     transition: 0.5s;
+    opacity: 0;
+  }
+  .nav-bar.active ul {
+    opacity: 1;
   }
   .nav-bar ul li a {
     margin-bottom: 12px;
   }
-  /* 8.17 */
 }
